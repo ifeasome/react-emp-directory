@@ -7,7 +7,7 @@ import Col from "../components/Col";
 function About() {
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+      <Hero backgroundImage="https://unsplash.com/photos/Vr_yaCXzLP0">
         <h1>Employee Directory</h1>
         <h2>The Directory for all your Employees</h2>
       </Hero>
