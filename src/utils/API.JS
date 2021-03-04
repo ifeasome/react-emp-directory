@@ -1,11 +1,10 @@
 import axios from "axios";
 
-// Export an object containing methods we'll use for accessing the Random API.
+// Export an object containing methods we'll use for accessing the Random API
 
-let APIcalls = {
+export default {
   getRandomUser: function() {
-    return axios.get("https://api.randomuser.me/?lego");
+    return axios.get("https://randomuser.me/api/?lego&results=50");
   }
 };
 
-export default APIcalls;
