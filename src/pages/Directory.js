@@ -1,75 +1,54 @@
-// import APIcalls from "../utils/API";
-import React, { useState, useEffect } from "react";
+import React, { Component } from 'react';
+import API from "../utils/API";
+import './style.css';
 
 
 
-export default function Directory() {
-    const [users, setUsers] = useState([]);
-
-useEffect(() => {
-       console.log("hey there!")
-        setUsers([1,2,3]);
-        console.log(users);
-        //make APIcall inside this func 
-        //api results put it inside the users []
-        //data in users, map users array 
-        //create table component 
-        //pass infor into the table componenet 
-        //then render it all 
-        
-    }, [users])
+class Table extends Component {
+  state = {
+    //state is by default an object
+    employees: [],
+    users: "",
+    search: "",
+  };
+  componentDidMount() {
+   API.getRandomUser()
+   .then((res) => {
+        console.log(res);
+        this.setState({ employees: res.data.results })
+})
+  }
+  renderTableData() {
+    return this.state.employees.map((each, index) => {
+      return (
+        <tr>
+          <img src={each.picture.thumbnail} alt="Employee Profile"/>
+          <td>{each.name.title + " " + each.name.first + " " + each.name.last }</td>
+          <td>{each.phone}</td>
+          <td>{each.email}</td>
+          <td>{each.dob.age}</td>
+        </tr>
+      );
+    });
+  }
+  renderTableHeader() {
+    let header = ["image", "name", "phone", "email", "age"];
+    return header.map((key, index) => {
+      return <th key={index}>{key.toUpperCase()}</th>;
+    });
+  }
+  render() {
     
     return (
-        <div>
-            <h1>I need you to say something!</h1>
-        </div>
-    )
-};
-
-
-// function Directory() {
-//   return (
-//     <div className="container">
-//   <h2>Responsive Table</h2>
-//   <p>The .table-responsive-sm className creates a responsive table which will scroll horizontally on screens that are less than 576px wide.</p>                                                                                      
-//   <p>Resize the browser window to see the effect.</p>
-//   <div className="table-responsive-sm">          
-//   <table className="table table-bordered">
-//     <thead>
-//       <tr>
-//         <th>#</th>
-//         <th>Firstname</th>
-//         <th>Lastname</th>
-//         <th>Age</th>
-//         <th>City</th>
-//         <th>Country</th>
-//         <th>Sex</th>
-//         <th>Example</th>
-//         <th>Example</th>
-//         <th>Example</th>
-//         <th>Example</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       <tr>
-//         <td>1</td>
-//         <td>Anna</td>
-//         <td>Pitt</td>
-//         <td>35</td>
-//         <td>New York</td>
-//         <td>USA</td>
-//         <td>Female</td>
-//         <td>Yes</td>
-//         <td>Yes</td>
-//         <td>Yes</td>
-//         <td>Yes</td>
-//       </tr>
-//     </tbody>
-//   </table>
-//   </div>
-// </div>
-//   );
-// }
-
-// export default Directory;
-
+      <div>
+        <table id="employees">
+          <tbody>
+            <tr>{this.renderTableHeader()}</tr>
+            {this.renderTableData()}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+}
+export default Table;
