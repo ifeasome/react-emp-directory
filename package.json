@@ -8,23 +8,20 @@
     "@testing-library/user-event": "^12.7.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "mdbreact": "^5.0.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.0",
     "react-bootstrap-table-next": "^4.0.3",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.0",
-    "homepage": "https://ifeasome.github.io/react-emp-directory/"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-   "deploy": "gh-pages -b master -d build",
-   "clean" : "gh-pages-clean"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -20,11 +20,15 @@ function About() {
         <Row>
           <Col size="md-12">
             <p>
-              This is the place to be. This Directory gives you all the Lego Employees of your company. 
-              No questions asked, The Directory is the most accurate you will ever see around. Click onto the next 
-              page and see for yourself. <br/> Please enjoy your React tour of The Directory. 
-              From all of us, <br/> 
-              Have a reactful day!
+              This is the place to be. This Directory gives you all the Lego Employees of your company.
+              It pulls them from an API ether and shhows you your human resource power house. The Directory 
+              is not made to be questioned but just to be utilised. The Directory is the most accurate you 
+              will ever see around. Move over to the next page and see for yourself. Make sure to immerse 
+              yourself in the magic of the React Spa. Please do enjoy your React tour of The Directory.
+              <br/> 
+              Reactfully Yours, <br/>
+              The Directory
+             
             </p>
           </Col>
         </Row>
