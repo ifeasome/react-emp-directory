@@ -31,7 +31,7 @@ To view repo, go to: [Application Repo](https://github.com/ifeasome/react-emp-di
 
 An employee directory that allows you to view random employees in a sortable and filterable table.
 
-[Deployed App]()
+[Deployed App](https://ifeasome.github.io/react-emp-directory/)
 
 
 ## Tests 
