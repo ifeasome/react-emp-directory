@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default {
   getRandomUser: function() {
-    return axios.get("https://randomuser.me/api/?lego&results=12&?seed=foobar");
+    return axios.get("https://randomuser.me/api/?lego&results=50");
   }
 };
 
