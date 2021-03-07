@@ -1,6 +1,7 @@
 {
   "name": "react-emp-directory",
   "version": "0.1.0",
+  "homepage": "https://ifeasome.github.io/react-emp-directory/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
