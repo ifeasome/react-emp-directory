@@ -7,7 +7,7 @@ const EmployeeTable = (props) => {
       {
         label: 'Image',
         field: 'image',
-        width: 500,
+        width: 300,
       },
       {
         label: 'Name',
@@ -15,7 +15,7 @@ const EmployeeTable = (props) => {
         width: 150,
         sort: 'asc',
         attributes: {
-          'aria-controls': 'DataTable',
+          'aria-controls': 'data',
           'aria-label': 'Name',
         },
       },
