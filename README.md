@@ -27,11 +27,19 @@ To clone program's repo, run the following command line in your terminal/git bas
 To view repo, go to: [Application Repo](https://github.com/ifeasome/react-emp-directory).
 
 
+
+
 ## Usage 
 
 An employee directory that allows you to view random employees in a sortable and filterable table.
 
 [Deployed App](https://ifeasome.github.io/react-emp-directory/)
+
+Deployed App Screenshots 
+
+[AboutPage](./public/images/about_page.jpg) <br/>
+
+[DirectoryPage](./public/images/directory_page.jpg)
 
 
 ## Tests 
